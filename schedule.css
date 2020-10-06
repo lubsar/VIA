@@ -1,0 +1,94 @@
+body {
+    margin:0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 40px 70px 70px 70px 30px 30px;
+    grid-template-columns: 1.3fr repeat(14, 1fr);
+    justify-content: center;
+}
+
+.grid-item {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.schedule-header p {
+    margin:0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.schedule-header {
+    background-color: lightslategray;
+    color: ivory;
+    text-align: center;
+}
+
+.lecture {
+    border-color: #FF4444;
+    background-color: rgba(255, 127, 80, 0.705);
+    font-family: 'Poppins', sans-serif;
+}
+
+.excercise {
+    border-color: #4444FF;
+    background-color: rgba(100, 148, 237, 0.705);
+    font-family: 'Poppins', sans-serif;
+}
+
+.excercise, .lecture {
+    display: flex;
+}
+
+.lecture div {
+    flex: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.excercise div {
+    flex: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left, .right {
+    height: 100%;
+    font-size: 10pt;
+}
+
+.left .name {
+    margin-top: 5px;
+    margin-bottom: auto;
+}
+
+.left .teacher-room {
+    margin-top: auto;
+    margin-bottom: 5px;
+}
+
+.left * {
+    margin-right: 0;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.right * {
+    text-align: right;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.group {
+    margin-bottom: 5px;
+    margin-top: auto;
+}
+
+.search-button {
+    margin-top: 5px;
+    margin-bottom: auto;
+}
