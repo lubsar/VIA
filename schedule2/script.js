@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
     document.getElementById("highlight-lectures").addEventListener("click", highlightLectures);
     document.getElementById("highlight-all").addEventListener("click", highlightAll);
 
-    setInterval(updateTime, 100);
+    setInterval(updateTime, 1000);
     updateTime();
 });
 
