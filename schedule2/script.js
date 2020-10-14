@@ -37,6 +37,7 @@ function updateTime() {
 
     needle.style.left = (left - needle.getBoundingClientRect().width / 2) + "px";
     needle.style.top = top + "px";
+    needle.style.height = day_name_bounds.height + "px";
     needle.style.display = "block";
 
     time += 1;
