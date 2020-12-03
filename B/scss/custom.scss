@@ -1,0 +1,183 @@
+//redegines
+$sizes: (
+    60: 60%,
+    );
+
+$theme-colors: (
+    // "gray": #ced4da,
+    "gray": #ced4da,
+    "icon-gray": #EEEEEE,
+    "gmaps-gray" : #F2F1F0,
+);
+
+$primary: #007bff;
+
+$enable-shadows:true;
+
+
+//buttons
+$btn-border-width: 2px;
+$btn-focus-box-shadow: none;
+
+//navigation
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $primary;
+$navbar-light-brand-color:                black;
+$navbar-light-brand-hover-color:          black;
+
+$dropdown-link-hover-color: $primary;
+
+//carousel
+$carousel-control-color: black;
+$carousel-control-opacity: 1;
+$carousel-control-hover-opacity: .5;
+
+//form
+$input-border-width: 0;
+$input-placeholder-color: #ced4da;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+//===END redefines===
+
+//navigation
+.navbar-nav .nav-item {
+    a {
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    &.active a, &>a:hover{
+        margin-bottom: 0px;
+        border-bottom: 5px solid theme-color("primary");
+    }
+}
+//===END navigation===
+//index.html
+#presentation {
+    background-image: url("img/signs-bnw.jpg");
+    //background-size: cover;
+}
+
+#breadcrumb-wrap {
+    background-color: $breadcrumb-bg;
+}
+
+.btn.border-dark, .btn.border-gray {
+    &:hover {
+        color: $white;
+        background-color: theme-color("primary");
+    }
+}
+
+.material-icons-outlined.big {
+    font-size: $display3-size;
+}
+
+.btn-custom-toggle {
+    @extend .btn;
+
+    &.active {
+        color: $white;
+        background-color: theme-color("primary");
+    }
+}
+
+.carousel-indicators {
+    li {
+        background-color: theme-color("gray");
+
+        &:hover {
+            background-color: theme-color("primary");
+        }
+    }
+
+    li.active {
+        background-color: theme-color("primary");
+    }
+}
+
+//contact.html
+#contact-send {
+    border-bottom: 5px solid theme-color("primary");
+    color: theme-color("primary");
+
+    &:hover {
+        color: $white;
+        background-color: theme-color("primary");
+    }
+}
+
+#social-container {
+    background-color: theme-color("gmaps-gray");
+    height: 140px;
+}
+
+#contact-emph {
+    font-size: 1.4rem;
+}
+
+#contacts-container {
+    background-color: theme-color("primary");
+    background-image: linear-gradient(90deg, theme-color("primary"), $cyan);
+    height: 100px;
+}
+
+#fullscreenOverlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2000;
+    cursor: pointer;
+
+    img {
+        display: block;
+        max-width:95%;
+        max-height:95%;
+        width: auto;
+        height: auto;
+      }
+}
+
+.galery-item {
+    background-size:cover;
+    background-position: center center;
+
+    &:hover {
+        cursor: zoom-in;
+    }
+}
+
+//laws.html
+.a-dark {
+    color: $black;
+    margin-bottom: 5px;
+    
+    &:hover {
+        text-decoration: none;
+        color: &black;
+        margin-bottom: 0px;
+        border-bottom: 5px solid theme-color("primary");
+    }
+}
+
+.law-update {
+    border-bottom: 5px solid theme-color("icon-gray");
+}
+
+.badge-cathegory {
+    background-color: $white;
+    border: 1px solid $black;
+}
+
+@include media-breakpoint-down(sm) {
+    #galeryCarousel {
+        min-height: 400px;
+    }
+}

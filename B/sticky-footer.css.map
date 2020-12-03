@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AA4DI,yBAAyB;ECtDzB,YAAa;IACT,QAAQ,EAAE,QAAQ;IAClB,UAAU,EAAE,IAAI;;EAGpB,YAAa;IACT,oCAAoC;IACpC,aAAa,EAAE,KAAK;;EAExB,UAAW;IACP,QAAQ,EAAE,QAAQ;IAClB,MAAM,EAAE,CAAC;IACT,KAAK,EAAE,IAAI;IACX,6CAA6C;IAC7C,MAAM,EAAE,KAAK;ADqDjB,4BAAyB;EChDzB,YAAa;IACT,QAAQ,EAAE,QAAQ;;EAItB,YAAa;IACT,oCAAoC;IACpC,aAAa,EAAE,CAAC;;EAGpB,UAAW;IACP,QAAQ,EAAE,QAAQ",
+"sources": ["node_modules/bootstrap/scss/mixins/_breakpoints.scss","scss/sticky-footer.scss"],
+"names": [],
+"file": "sticky-footer.css"
+}

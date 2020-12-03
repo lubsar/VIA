@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="sk" class="sf-html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap-customized.css">
+    <link rel="stylesheet" href="sticky-footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" >
+    <title>Autoškola Ľubomír Hlavko</title>
+    <script src="js/courses.js"></script>
+  </head>
+  <body class="sf-body">
+    <!-- navigation --> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm container-lg">
+        <a class="navbar-brand" href="index.html">Autoškola hla0196</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active px-3">
+              <a class="nav-link" href="index.html">Úvod</a>
+            </li>
+            <li class="nav-item dropdown px-3">
+              <a class="nav-link dropdown-toggle" href="courses.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Kurzy
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Rýchlokurz</a>
+                <a class="dropdown-item" href="#">Štandardný kurz</a>
+              </div>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="contact.html">Kontakt</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="laws.html">Vyhlášky</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- content -->
+    <!-- breadcrumb -->
+    <div id="breadcrumb-wrap" class="bg-gray-200 my-5">
+        <nav aria-label="breadcrumb" class="container-lg">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><span class="material-icons">home</span> Domov</li>
+              <li class="breadcrumb-item">Kurzy</li>
+            </ol>
+          </nav>
+    </div> 
+    
+    <!-- header -->
+    <div class="container-lg">
+        <h2 class="text-center">Ponuka kurzov</h2>
+        <p class="text-center text-gray">Pokúkame štandardné, skrátené a individuálne kurzy pre skupiny B, C a T.</p>
+    </div>
+
+    <!-- selection-->
+    <form class="container-lg">
+      <div class="form-group">
+        <select name="Skupina" class="form-control shadow" id="courseTypeSelector">
+          <option value="0">Vyberte skupinu</option>
+          <option value="1">Skupina B</option>
+          <option value="2">Skupina C</option>
+          <option value="3">Skupina T</option>
+        </select>
+      </div>
+    </form>
+
+    <!-- course types -->
+    <div class="container-lg mt-5 course-info d-none">
+      <h2 class="text-center" id="coures-header">Typy kurzov</h2>
+      <div class="text-justify text-secondary my-3" id="course-description"></div>
+      <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-2">
+            <div class="text-center bg-light p-3 h-100 d-flex flex-column align-items-center" id="standard">
+              <span class="d-block material-icons-outlined big text-gray text-center"><u>drive_eta</u></span>
+              <h5 class="text-secondary my-4">Štandardný kurz</h5>
+                <h3 class="price text-primary"></h3>
+                <p>4 mesačný</p>
+                <p>Výučba teórie v stanovený čas</p>
+                <p>2-4 hodiny jázd týždenne</p>
+                <div class="mt-auto mb-2">
+                  <p class="registration text-success"><span class="registered"></span>/<span class="capacity"></span> prihlásených</p>
+                  <p class="registration-message text-danger"></p>
+                  <p class="countdown"></p>
+                  <a class="btn btn-primary register-bttn" href="#" role="button">Prihlásiť sa</a>
+                </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-2">
+            <div class="text-center bg-light p-3 h-100 d-flex flex-column align-items-center" id="shortened">
+              <span class="d-block material-icons-outlined big text-gray text-center"><u>update</u></span>
+              <h5 class="text-secondary my-4">Rýchlokurz</h5>
+              <h3 class="price text-primary"></h3>
+              <p>1 mesačný</p>
+              <p>Skrátená výuka teórie</p>
+              <p>Max 9 hodín jázd týždenne</p>
+              <div class="mt-auto mb-2">
+                <p class="registration text-success"><span class="registered"></span>/<span class="capacity"></span> prihlásených</p>
+                <p class="registration-message text-danger"></p>
+                <p class="countdown"></p>
+                <a class="btn btn-primary register-bttn" href="#" role="button">Prihlásiť sa</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-2">
+            <div class="text-center bg-light p-3 h-100 d-flex flex-column align-items-center" id="individual">
+              <span class="d-block material-icons-outlined big text-gray text-center"><u>perm_identity</u></span>
+              <h5 class="text-secondary my-4">Individuálny</h5>
+              <h3 class="price text-primary"></h3>
+              <p>Vlastný harmonogram</p>
+              <p>Výber vozidiel a inštruktora</p>
+              <p>Max 12 hodín jázd týždenne</p>
+              <a class="btn btn-primary register-bttn d-block mt-auto mb-2" href="#" role="button">Prihlásiť sa</a>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- END content -->
+    <!-- footer-->
+     <footer class="footer bg-dark font-small sf-footer">
+      <div class="container-lg text-light">
+        <div class="row">
+          <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12">
+            <div class="container">
+              dawajdawaj
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
+            <div class="container">
+              dawajdawaj
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
+            <div class="container">
+              dawajdawaj
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12">
+            <div class="container">
+              dawajdawaj
+            </div>
+          </div>
+        </div>
+        <div class="text-center py-3">
+          Copyright ©2020 Ľubomír Hlavko
+        </div>
+      </div>
+    </footer>  
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+  </body>
+</html>

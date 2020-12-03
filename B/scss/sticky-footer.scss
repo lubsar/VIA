@@ -1,0 +1,39 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins/_breakpoints";
+
+// Example usage:
+@include media-breakpoint-up(sm) {
+    html.sf-html {
+        position: relative;
+        min-height: 100%;
+    }
+    
+    body.sf-body {
+        /* Margin bottom by footer height */
+        margin-bottom: 120px;
+    }
+    .sf-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 100px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    html.sf-html {
+        position: relative;
+        //min-height: 100%;
+    }
+    
+    body.sf-body {
+        /* Margin bottom by footer height */
+        margin-bottom: 0;
+    }
+
+    .sf-footer {
+        position: relative;
+    }
+}
